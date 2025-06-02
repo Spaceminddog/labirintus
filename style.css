@@ -1,95 +1,96 @@
 body {
-    margin: 0;
-    padding: 0 150px;
-    background-color: #F8EDE3;
-    font-family: 'Inter', sans-serif;
-    color: black;
+  margin: 0;
+  padding: 0 150px;
+  background: linear-gradient(180deg, #F8EDE3 50%, #ffffff 50%);
+  font-family: 'Inter', sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.button-primary {
+  background-color: #748E63;
+  color: #F9F9F9;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-primary:hover {
+  background-color: #5f734e;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: #748E63;
+  font-size: 20px;
+  border: 3px solid #748E63;
+  border-radius: 15px;
+  height: 60px;
+  width: 500px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button-secondary:hover {
+  background-color: #fef1ec;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px;
   }
-  
-  .hero {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 50px 0;
-  }
-  
+
   h1 {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 24px;
   }
-  
+
   h2 {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 20px;
   }
-  
+
   h3 {
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 20px;
   }
-  
+
   p {
     font-size: 18px;
-    font-weight: 400;
   }
-  
-  .button-primary {
-    background-color: #748E63;
-    color: #F9F9F9;
-    font-size: 20px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
-    width: 500px;
-    height: 60px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .button-primary:hover {
-    background-color: #748E63;
-  }
-  
+
+  .button-primary,
   .button-secondary {
-    background-color: transparent;
-    color: #748E63;
-    font-size: 20px;
-    border: 3px solid #748E63;
-    border-radius: 15px;
-    height: 60px;
-    width: 500px;
-    cursor: pointer;
-    transition: all 0.3s;
+    width: 100%;
   }
-  
-  .button-secondary:hover {
-    background-color: #fef1ec;
-  }
-  
-  @media (max-width: 768px) {
-    body {
-      padding: 0 20px;
-    }
-  
-    h1 {
-      font-size: 24px;
-    }
-  
-    h2 {
-      font-size: 20px;
-    }
-  
-    h3 {
-      font-size: 20px;
-    }
-  
-    p {
-      font-size: 18px;
-    }
-  
-    .button-primary,
-    .button-secondary {
-      width: 100%;
-    }
-  }
-  
+}
