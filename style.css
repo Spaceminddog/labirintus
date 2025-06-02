@@ -34,7 +34,7 @@ body {
   }
   
   .button-primary {
-    background-color: #F48E63;
+    background-color: #748E63;
     color: #F9F9F9;
     font-size: 20px;
     border: none;
@@ -47,14 +47,14 @@ body {
   }
   
   .button-primary:hover {
-    background-color: #e3774f;
+    background-color: #748E63;
   }
   
   .button-secondary {
     background-color: transparent;
-    color: #F48E63;
+    color: #748E63;
     font-size: 20px;
-    border: 3px solid #F48E63;
+    border: 3px solid #748E63;
     border-radius: 15px;
     height: 60px;
     width: 500px;
