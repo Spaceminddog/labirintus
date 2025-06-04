@@ -12,65 +12,40 @@ document.addEventListener('DOMContentLoaded', function() {
   const dots = document.querySelectorAll('.dot');
   let currentIndex = 0;
   let isAnimating = false;
+  const ANIMATION_DURATION = 500;
 
-  function showNextReview() {
-    if (isAnimating) return;
+  function updateActiveReview(newIndex) {
+    if (isAnimating || newIndex === currentIndex) return;
     isAnimating = true;
 
-    const currentContainer = reviewContainers[currentIndex];
-    currentIndex = (currentIndex + 1) % reviewContainers.length;
-    const nextContainer = reviewContainers[currentIndex];
+    // Remove active classes
+    reviewContainers[currentIndex].classList.remove('active');
+    dots[currentIndex].classList.remove('active');
 
-    // Start exit animation
-    currentContainer.classList.add('slide-out');
-    dots[currentIndex === 0 ? reviewContainers.length - 1 : currentIndex - 1].classList.remove('active');
+    // Add active classes to new elements
+    currentIndex = newIndex;
+    reviewContainers[currentIndex].classList.add('active');
+    dots[currentIndex].classList.add('active');
 
-    // After exit animation, switch containers
+    // Reset animation state after animation completes
     setTimeout(() => {
-      currentContainer.classList.remove('active');
-      nextContainer.classList.add('active');
-      dots[currentIndex].classList.add('active');
-
-      // Reset animation state
-      setTimeout(() => {
-        currentContainer.classList.remove('slide-out');
-        isAnimating = false;
-      }, 500);
-    }, 500);
+      isAnimating = false;
+    }, ANIMATION_DURATION);
   }
 
   // Add click handlers to dots
   dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      if (index === currentIndex || isAnimating) return;
-      isAnimating = true;
-
-      const currentContainer = reviewContainers[currentIndex];
-      const nextContainer = reviewContainers[index];
-
-      // Start exit animation
-      currentContainer.classList.add('slide-out');
-      dots[currentIndex].classList.remove('active');
-
-      // After exit animation, switch containers
-      setTimeout(() => {
-        currentContainer.classList.remove('active');
-        nextContainer.classList.add('active');
-        dots[index].classList.add('active');
-
-        // Reset animation state
-        setTimeout(() => {
-          currentContainer.classList.remove('slide-out');
-          isAnimating = false;
-        }, 500);
-      }, 500);
-
-      currentIndex = index;
-    });
+    dot.addEventListener('click', () => updateActiveReview(index));
   });
 
+  // Auto-advance reviews
+  function autoAdvance() {
+    const nextIndex = (currentIndex + 1) % reviewContainers.length;
+    updateActiveReview(nextIndex);
+  }
+
   // Change review every 10 seconds
-  setInterval(showNextReview, 10000);
+  setInterval(autoAdvance, 10000);
 });
 
 // FAQ toggle functionality
