@@ -11,41 +11,35 @@ document.addEventListener('DOMContentLoaded', function() {
   const reviewContainers = document.querySelectorAll('.review-container');
   const dots = document.querySelectorAll('.dot');
   let currentIndex = 0;
-  let isAnimating = false;
-  const ANIMATION_DURATION = 500;
 
-  function updateActiveReview(newIndex) {
-    if (isAnimating || newIndex === currentIndex) return;
-    isAnimating = true;
+  function showReview(index) {
+    // Hide all reviews
+    reviewContainers.forEach(container => {
+      container.style.display = 'none';
+    });
+    // Remove active class from all dots
+    dots.forEach(dot => {
+      dot.classList.remove('active');
+    });
 
-    // Remove active classes
-    reviewContainers[currentIndex].classList.remove('active');
-    dots[currentIndex].classList.remove('active');
-
-    // Add active classes to new elements
-    currentIndex = newIndex;
-    reviewContainers[currentIndex].classList.add('active');
-    dots[currentIndex].classList.add('active');
-
-    // Reset animation state after animation completes
-    setTimeout(() => {
-      isAnimating = false;
-    }, ANIMATION_DURATION);
+    // Show selected review and activate corresponding dot
+    reviewContainers[index].style.display = 'block';
+    dots[index].classList.add('active');
   }
 
   // Add click handlers to dots
   dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => updateActiveReview(index));
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      showReview(currentIndex);
+    });
   });
 
-  // Auto-advance reviews
-  function autoAdvance() {
-    const nextIndex = (currentIndex + 1) % reviewContainers.length;
-    updateActiveReview(nextIndex);
-  }
-
-  // Change review every 10 seconds
-  setInterval(autoAdvance, 10000);
+  // Auto-advance reviews every 10 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % reviewContainers.length;
+    showReview(currentIndex);
+  }, 10000);
 });
 
 // FAQ toggle functionality
