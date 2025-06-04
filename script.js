@@ -19,13 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
     dots.forEach(dot => dot.classList.remove('active'));
     
     // Show selected review and activate its dot
-    reviews[index].style.display = 'block';
-    dots[index].classList.add('active');
+    const selectedReview = document.querySelector(`.review-container[data-review="${index}"]`);
+    const selectedDot = document.querySelector(`.dot[data-dot="${index}"]`);
+    
+    if (selectedReview && selectedDot) {
+      selectedReview.style.display = 'block';
+      selectedDot.classList.add('active');
+    }
   }
 
   // Add click handlers to dots
-  dots.forEach((dot, index) => {
+  dots.forEach(dot => {
     dot.addEventListener('click', () => {
+      const index = parseInt(dot.getAttribute('data-dot'));
       currentReview = index;
       showReview(currentReview);
     });
