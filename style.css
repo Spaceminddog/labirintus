@@ -336,6 +336,29 @@ p {
   line-height: 1.6;
 }
 
+.hero .review-container {
+  background-color: rgba(116, 142, 99, 0.5);
+  border: 3px solid #748E63;
+  border-radius: 15px;
+  box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
+  padding: 20px 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.hero .review-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero .review-container p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .hero {
     padding: 50px 64px;
