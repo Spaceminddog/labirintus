@@ -203,7 +203,7 @@ p {
   position: relative;
 }
 
-.review-container.active {
+.review-container:first-child {
   display: block;
 }
 
