@@ -8,46 +8,37 @@ function handleSecondaryClick() {
 
 // Review carousel functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Get all review containers and dots
-  const reviewContainers = document.querySelectorAll('.review-container');
+  const reviews = document.querySelectorAll('.review-container');
   const dots = document.querySelectorAll('.dot');
-  let currentIndex = 0;
+  let currentReview = 0;
 
-  // Function to show a specific review and update dots
   function showReview(index) {
     // Hide all reviews
-    reviewContainers.forEach(container => {
-      container.style.display = 'none';
-    });
+    reviews.forEach(review => review.style.display = 'none');
     // Remove active class from all dots
-    dots.forEach(dot => {
-      dot.classList.remove('active');
-    });
-
-    // Show the selected review and activate its dot
-    reviewContainers[index].style.display = 'block';
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Show selected review and activate its dot
+    reviews[index].style.display = 'block';
     dots[index].classList.add('active');
-  }
-
-  // Function to advance to the next review
-  function nextReview() {
-    currentIndex = (currentIndex + 1) % reviewContainers.length;
-    showReview(currentIndex);
   }
 
   // Add click handlers to dots
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
-      currentIndex = index;
-      showReview(currentIndex);
+      currentReview = index;
+      showReview(currentReview);
     });
   });
 
-  // Initialize the carousel - show first review and activate first dot
+  // Show first review
   showReview(0);
 
-  // Start auto-advance after initial display
-  setInterval(nextReview, 10000);
+  // Auto advance reviews
+  setInterval(() => {
+    currentReview = (currentReview + 1) % reviews.length;
+    showReview(currentReview);
+  }, 10000);
 });
 
 // FAQ toggle functionality
