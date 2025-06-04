@@ -200,17 +200,11 @@ p {
   padding: 20px 10px;
   text-align: center;
   width: 100%;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: opacity 0.5s ease-in-out;
+  position: relative;
 }
 
 .review-container.active {
   display: block;
-  opacity: 1;
 }
 
 .review-container h3 {
