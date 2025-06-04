@@ -72,3 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Change review every 10 seconds
   setInterval(showNextReview, 10000);
 });
+
+// FAQ toggle functionality
+function toggleFaq(element) {
+  const container = element.parentElement;
+  container.classList.toggle('active');
+}
