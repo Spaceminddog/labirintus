@@ -237,6 +237,68 @@ p {
   background-color: rgba(116, 142, 99, 1);
 }
 
+.faq {
+  padding: 80px 16px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.faq h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  margin-bottom: 20px;
+}
+
+.faq-top {
+  background-color: #748E63;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-top h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.faq-arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-bottom {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #748E63;
+  margin-top: 10px;
+  display: none;
+}
+
+.faq-bottom p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.faq-container.active .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-container.active .faq-bottom {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .hero {
     padding: 50px 64px;
@@ -251,6 +313,10 @@ p {
   }
 
   .reviews {
+    padding: 80px 64px;
+  }
+
+  .faq {
     padding: 80px 64px;
   }
 }
@@ -326,6 +392,10 @@ p {
   }
 
   .reviews {
+    padding: 40px 16px;
+  }
+
+  .faq {
     padding: 40px 16px;
   }
 }
