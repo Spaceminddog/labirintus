@@ -69,6 +69,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Initialize first review
+  reviewContainers[0].classList.add('active');
+  dots[0].classList.add('active');
+
   // Change review every 10 seconds
   setInterval(showNextReview, 10000);
 });
