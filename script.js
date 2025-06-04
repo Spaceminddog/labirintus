@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Show first review immediately
+  // Show first review and activate first dot
   showReview(0);
+  dots[0].classList.add('active');
 
   // Auto-advance reviews every 10 seconds
   setInterval(() => {
