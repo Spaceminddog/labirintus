@@ -13,11 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentIndex = 0;
 
   function showReview(index) {
-    // Hide all reviews
+    // Hide all reviews and remove active class from all dots
     reviewContainers.forEach(container => {
       container.style.display = 'none';
     });
-    // Remove active class from all dots
     dots.forEach(dot => {
       dot.classList.remove('active');
     });
@@ -34,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
       showReview(currentIndex);
     });
   });
+
+  // Show first review immediately
+  showReview(0);
 
   // Auto-advance reviews every 10 seconds
   setInterval(() => {
