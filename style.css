@@ -192,7 +192,6 @@ p {
 }
 
 .review-container {
-  display: none;
   background-color: var(--primary-color-rgba);
   border: 3px solid var(--primary-color);
   border-radius: var(--border-radius);
@@ -205,17 +204,13 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  transition: opacity 0.5s ease-in-out;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 .review-container.active {
-  display: block;
   opacity: 1;
-}
-
-.review-container.slide-out {
-  transform: translateX(-100%);
-  opacity: 0;
+  visibility: visible;
 }
 
 .review-container h3 {
