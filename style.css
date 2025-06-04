@@ -183,12 +183,9 @@ p {
   padding: 80px 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   max-width: 70%;
   margin: 0 auto;
-  position: relative;
-  min-height: 300px;
 }
 
 .review-container {
@@ -196,11 +193,9 @@ p {
   background-color: var(--primary-color-rgba);
   border: 3px solid var(--primary-color);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  padding: 20px 10px;
-  text-align: center;
+  padding: 20px;
   width: 100%;
-  position: relative;
+  margin-bottom: 20px;
 }
 
 .review-container h3 {
@@ -211,28 +206,24 @@ p {
 
 .review-container p {
   font-size: 18px;
-  font-weight: 400;
   line-height: 1.6;
 }
 
 .review-dots {
   display: flex;
-  justify-content: center;
   gap: 10px;
-  margin-top: 20px;
 }
 
 .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: rgba(116, 142, 99, 0.5);
+  background-color: var(--primary-color-rgba);
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .dot.active {
-  background-color: rgba(116, 142, 99, 1);
+  background-color: var(--primary-color);
 }
 
 .faq {
