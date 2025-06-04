@@ -140,18 +140,18 @@ p {
 
 .benefit-text {
   flex: 1;
-  text-align: right;
+  text-align: left;
 }
 
 .benefit-text h2 {
   margin-bottom: 20px;
-  text-align: right;
+  text-align: left;
 }
 
 .benefit-text p {
   font-size: 18px;
   line-height: 1.6;
-  text-align: right;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
