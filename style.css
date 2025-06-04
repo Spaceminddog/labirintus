@@ -180,7 +180,7 @@ p {
 }
 
 .reviews {
-  padding: var(--section-padding) var(--mobile-padding);
+  padding: 80px 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -204,27 +204,31 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .review-container.active {
+  display: block;
   opacity: 1;
-  visibility: visible;
+  transform: translateX(0);
+}
+
+.review-container.slide-out {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .review-container h3 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: var(--text-color);
 }
 
 .review-container p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--text-color);
 }
 
 .review-dots {
@@ -232,21 +236,19 @@ p {
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
-  position: relative;
-  z-index: 1;
 }
 
 .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--primary-color-rgba);
+  background-color: rgba(116, 142, 99, 0.5);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .dot.active {
-  background-color: var(--primary-color);
+  background-color: rgba(116, 142, 99, 1);
 }
 
 .faq {
