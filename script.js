@@ -43,11 +43,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Show first review immediately when page loads
-  showReview(0);
+  // Initialize the carousel
+  showReview(0);  // Show first review immediately
+  dots[0].classList.add('active');  // Activate first dot
 
-  // Auto-advance reviews every 10 seconds
-  setInterval(nextReview, 10000);
+  // Start auto-advance after initial display
+  setTimeout(() => {
+    setInterval(nextReview, 10000);
+  }, 10000);
 });
 
 // FAQ toggle functionality
