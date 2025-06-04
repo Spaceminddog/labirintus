@@ -64,12 +64,12 @@ p {
 }
 
 .button-primary {
-  background-color: #748E63;
-  color: #F9F9F9;
+  background-color: var(--primary-color);
+  color: var(--white);
   font-size: 20px;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   width: 500px;
   height: 60px;
   cursor: pointer;
@@ -82,10 +82,10 @@ p {
 
 .button-secondary {
   background-color: transparent;
-  color: #748E63;
+  color: var(--primary-color);
   font-size: 20px;
-  border: 3px solid #748E63;
-  border-radius: 15px;
+  border: 3px solid var(--primary-color);
+  border-radius: var(--border-radius);
   height: 60px;
   width: 500px;
   cursor: pointer;
@@ -97,9 +97,9 @@ p {
 }
 
 .features {
-  background-color: #748E63;
+  background-color: var(--primary-color);
   width: 100%;
-  padding: 80px 0;
+  padding: var(--section-padding) 0;
 }
 
 .features-content {
@@ -192,11 +192,10 @@ p {
 }
 
 .review-container {
-  display: none;
-  background-color: rgba(116, 142, 99, 0.5);
-  border: 3px solid #748E63;
-  border-radius: 15px;
-  box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-color-rgba);
+  border: 3px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   padding: 20px 10px;
   text-align: center;
   width: 100%;
@@ -268,15 +267,15 @@ p {
 }
 
 .faq-top {
-  background-color: rgba(116, 142, 99, 0.5);
+  background-color: var(--primary-color-rgba);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
-  border: 3px solid #748E63;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--primary-color);
 }
 
 .faq-top h2 {
@@ -293,13 +292,13 @@ p {
 }
 
 .faq-bottom {
-  background-color: white;
+  background-color: var(--white);
   padding: 20px;
-  border-radius: 10px;
-  border: 3px solid #748E63;
+  border-radius: var(--border-radius);
+  border: 3px solid var(--primary-color);
   margin-top: 10px;
   display: none;
-  box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .faq-bottom p {
@@ -330,7 +329,7 @@ p {
 .last-cta h1 {
   font-size: 50px;
   font-weight: bold;
-  color: #748E63;
+  color: var(--primary-color);
   text-align: center;
   margin: 0;
 }
@@ -352,10 +351,10 @@ p {
 }
 
 .hero .review-container {
-  background-color: rgba(116, 142, 99, 0.5);
-  border: 3px solid #748E63;
-  border-radius: 15px;
-  box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-color-rgba);
+  border: 3px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   padding: 20px 10px;
   text-align: center;
   width: 100%;
@@ -501,14 +500,14 @@ p {
 
 .about-container {
   max-width: 500px;
-  background-color: white;
-  box-shadow: 0px 7px 29px rgba(0, 0, 0, 0.2);
+  background-color: var(--white);
+  box-shadow: var(--shadow);
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 }
 
 .about-container img {
