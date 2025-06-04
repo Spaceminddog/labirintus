@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Reset animation state after transition
       setTimeout(() => {
         isAnimating = false;
+        // Reset slide-out class from previous container
+        reviewContainers.forEach(container => {
+          container.classList.remove('slide-out');
+        });
       }, 500);
     }, 50);
   }
@@ -62,6 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset animation state after transition
         setTimeout(() => {
           isAnimating = false;
+          // Reset slide-out class from previous container
+          reviewContainers.forEach(container => {
+            container.classList.remove('slide-out');
+          });
         }, 500);
       }, 50);
     });
