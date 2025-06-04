@@ -11,8 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const reviewContainers = document.querySelectorAll('.review-container');
   const dots = document.querySelectorAll('.dot');
   let currentIndex = 0;
+  let isAnimating = false;
 
   function showNextReview() {
+    if (isAnimating) return;
+    isAnimating = true;
+
     // Add slide-out class to current container
     reviewContainers[currentIndex].classList.add('slide-out');
     dots[currentIndex].classList.remove('active');
@@ -27,13 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       reviewContainers[currentIndex].classList.add('active');
       dots[currentIndex].classList.add('active');
+      
+      // Reset animation state after transition
+      setTimeout(() => {
+        isAnimating = false;
+      }, 500);
     }, 50);
   }
 
   // Add click handlers to dots
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
-      if (index === currentIndex) return;
+      if (index === currentIndex || isAnimating) return;
+      isAnimating = true;
       
       // Add slide-out class to current container
       reviewContainers[currentIndex].classList.add('slide-out');
@@ -48,6 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => {
         reviewContainers[currentIndex].classList.add('active');
         dots[currentIndex].classList.add('active');
+        
+        // Reset animation state after transition
+        setTimeout(() => {
+          isAnimating = false;
+        }, 500);
       }, 50);
     });
   });
