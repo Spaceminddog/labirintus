@@ -17,30 +17,26 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isAnimating) return;
     isAnimating = true;
 
-    // Add slide-out class to current container
-    reviewContainers[currentIndex].classList.add('slide-out');
-    dots[currentIndex].classList.remove('active');
-    
-    // Move to next container
+    const currentContainer = reviewContainers[currentIndex];
     currentIndex = (currentIndex + 1) % reviewContainers.length;
-    
-    // Remove active class from current container
-    reviewContainers[currentIndex].classList.remove('active');
-    
-    // Add active class to new container
+    const nextContainer = reviewContainers[currentIndex];
+
+    // Start exit animation
+    currentContainer.classList.add('slide-out');
+    dots[currentIndex === 0 ? reviewContainers.length - 1 : currentIndex - 1].classList.remove('active');
+
+    // After exit animation, switch containers
     setTimeout(() => {
-      reviewContainers[currentIndex].classList.add('active');
+      currentContainer.classList.remove('active');
+      nextContainer.classList.add('active');
       dots[currentIndex].classList.add('active');
-      
-      // Reset animation state after transition
+
+      // Reset animation state
       setTimeout(() => {
+        currentContainer.classList.remove('slide-out');
         isAnimating = false;
-        // Reset slide-out class from previous container
-        reviewContainers.forEach(container => {
-          container.classList.remove('slide-out');
-        });
       }, 500);
-    }, 50);
+    }, 500);
   }
 
   // Add click handlers to dots
@@ -48,30 +44,28 @@ document.addEventListener('DOMContentLoaded', function() {
     dot.addEventListener('click', () => {
       if (index === currentIndex || isAnimating) return;
       isAnimating = true;
-      
-      // Add slide-out class to current container
-      reviewContainers[currentIndex].classList.add('slide-out');
+
+      const currentContainer = reviewContainers[currentIndex];
+      const nextContainer = reviewContainers[index];
+
+      // Start exit animation
+      currentContainer.classList.add('slide-out');
       dots[currentIndex].classList.remove('active');
-      
-      currentIndex = index;
-      
-      // Remove active class from current container
-      reviewContainers[currentIndex].classList.remove('active');
-      
-      // Add active class to new container
+
+      // After exit animation, switch containers
       setTimeout(() => {
-        reviewContainers[currentIndex].classList.add('active');
-        dots[currentIndex].classList.add('active');
-        
-        // Reset animation state after transition
+        currentContainer.classList.remove('active');
+        nextContainer.classList.add('active');
+        dots[index].classList.add('active');
+
+        // Reset animation state
         setTimeout(() => {
+          currentContainer.classList.remove('slide-out');
           isAnimating = false;
-          // Reset slide-out class from previous container
-          reviewContainers.forEach(container => {
-            container.classList.remove('slide-out');
-          });
         }, 500);
-      }, 50);
+      }, 500);
+
+      currentIndex = index;
     });
   });
 
