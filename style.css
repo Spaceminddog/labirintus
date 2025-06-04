@@ -8,13 +8,14 @@ body {
 }
 
 .hero {
-  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding: 50px 150px;
+  padding: 50px 16px;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -82,12 +83,14 @@ p {
 
 .features {
   background-color: #748E63;
-  padding: 80px 150px;
+  padding: 80px 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .feature-container {
@@ -117,10 +120,12 @@ p {
 }
 
 .benefits {
-  padding: 80px 150px;
+  padding: 80px 16px;
   display: flex;
   flex-direction: column;
   gap: 60px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .benefits h1 {
@@ -154,6 +159,20 @@ p {
   text-align: left;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    padding: 50px 64px;
+  }
+
+  .features {
+    padding: 80px 64px;
+  }
+
+  .benefits {
+    padding: 80px 64px;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     padding: 0;
@@ -161,7 +180,7 @@ p {
 
   .hero {
     width: 100%;
-    padding: 30px 20px;
+    padding: 30px 16px;
     gap: 25px;
   }
 
@@ -179,6 +198,9 @@ p {
 
   p {
     font-size: 18px;
+    line-height: 1.6;
+    max-width: 65ch;
+    margin: 0 auto;
   }
 
   .button-primary,
@@ -187,7 +209,7 @@ p {
   }
 
   .features {
-    padding: 40px 20px;
+    padding: 40px 16px;
     flex-direction: column;
     gap: 30px;
   }
@@ -200,7 +222,7 @@ p {
   }
 
   .benefits {
-    padding: 40px 20px;
+    padding: 40px 16px;
     gap: 40px;
   }
 
