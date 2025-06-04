@@ -11,70 +11,37 @@ document.addEventListener('DOMContentLoaded', function() {
   const reviewContainers = document.querySelectorAll('.review-container');
   const dots = document.querySelectorAll('.dot');
   let currentIndex = 0;
-  let isAnimating = false;
 
-  function showNextReview() {
-    if (isAnimating) return;
-    isAnimating = true;
+  function showReview(index) {
+    // Remove active class from all reviews and dots
+    reviewContainers.forEach(container => {
+      container.classList.remove('active');
+      container.classList.remove('slide-out');
+    });
+    dots.forEach(dot => dot.classList.remove('active'));
 
-    const currentContainer = reviewContainers[currentIndex];
-    currentIndex = (currentIndex + 1) % reviewContainers.length;
-    const nextContainer = reviewContainers[currentIndex];
-
-    // Start exit animation
-    currentContainer.classList.add('slide-out');
-    dots[currentIndex === 0 ? reviewContainers.length - 1 : currentIndex - 1].classList.remove('active');
-
-    // After exit animation, switch containers
-    setTimeout(() => {
-      currentContainer.classList.remove('active');
-      nextContainer.classList.add('active');
-      dots[currentIndex].classList.add('active');
-
-      // Reset animation state
-      setTimeout(() => {
-        currentContainer.classList.remove('slide-out');
-        isAnimating = false;
-      }, 500);
-    }, 500);
+    // Add active class to current review and dot
+    reviewContainers[index].classList.add('active');
+    dots[index].classList.add('active');
   }
 
   // Add click handlers to dots
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
-      if (index === currentIndex || isAnimating) return;
-      isAnimating = true;
-
-      const currentContainer = reviewContainers[currentIndex];
-      const nextContainer = reviewContainers[index];
-
-      // Start exit animation
-      currentContainer.classList.add('slide-out');
-      dots[currentIndex].classList.remove('active');
-
-      // After exit animation, switch containers
-      setTimeout(() => {
-        currentContainer.classList.remove('active');
-        nextContainer.classList.add('active');
-        dots[index].classList.add('active');
-
-        // Reset animation state
-        setTimeout(() => {
-          currentContainer.classList.remove('slide-out');
-          isAnimating = false;
-        }, 500);
-      }, 500);
-
+      if (index === currentIndex) return;
       currentIndex = index;
+      showReview(currentIndex);
     });
   });
 
   // Initialize first review
-  reviewContainers[0].classList.add('active');
-  dots[0].classList.add('active');
+  showReview(0);
 
   // Change review every 10 seconds
-  setInterval(showNextReview, 10000);
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % reviewContainers.length;
+    showReview(currentIndex);
+  }, 10000);
 });
 
 // FAQ toggle functionality
