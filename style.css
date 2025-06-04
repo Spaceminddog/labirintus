@@ -125,6 +125,7 @@ p {
 
 .benefits h1 {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .benefit-container {
@@ -134,21 +135,23 @@ p {
 }
 
 .benefit-container.reverse {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .benefit-text {
   flex: 1;
-  text-align: left;
+  text-align: right;
 }
 
 .benefit-text h2 {
   margin-bottom: 20px;
+  text-align: right;
 }
 
 .benefit-text p {
   font-size: 18px;
   line-height: 1.6;
+  text-align: right;
 }
 
 @media (max-width: 768px) {
