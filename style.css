@@ -203,10 +203,6 @@ p {
   position: relative;
 }
 
-.review-container:first-child {
-  display: block;
-}
-
 .review-container h3 {
   font-size: 18px;
   font-weight: bold;
