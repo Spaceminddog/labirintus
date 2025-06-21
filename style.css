@@ -111,6 +111,7 @@ p {
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
+  box-sizing: border-box;
 }
 
 .feature-container {
@@ -146,6 +147,7 @@ p {
   gap: 60px;
   max-width: 70%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .benefits h1 {
@@ -186,6 +188,7 @@ p {
   align-items: center;
   max-width: 70%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .review-container {
@@ -230,6 +233,7 @@ p {
   padding: 80px 16px;
   max-width: 70%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .faq h1 {
@@ -299,6 +303,7 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  box-sizing: border-box;
 }
 
 .last-cta h1 {
@@ -370,12 +375,12 @@ p {
   }
 
   .hero,
-  .features-content,
   .benefits,
   .reviews,
   .faq,
   .last-cta,
   .about {
+    max-width: 100%;
     padding: calc(var(--section-padding) / 2) var(--mobile-padding);
   }
 
@@ -390,23 +395,26 @@ p {
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
-    max-width: 65ch;
+    max-width: 100%;
     margin: 0 auto;
   }
 
   .button-primary,
   .button-secondary {
     width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    height: 50px;
   }
 
   .features {
@@ -414,6 +422,7 @@ p {
   }
 
   .features-content {
+    max-width: 100%;
     padding: 0 16px;
     flex-direction: column;
     gap: 30px;
@@ -424,6 +433,14 @@ p {
     max-width: 100%;
     flex: none;
     gap: 20px;
+  }
+
+  .feature-container h2 {
+    font-size: 20px;
+  }
+
+  .feature-container p {
+    font-size: 14px;
   }
 
   .benefits {
@@ -444,25 +461,206 @@ p {
     text-align: center;
   }
 
+  .benefit-text h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .benefit-text p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .benefit-container img {
+    width: 250px;
+    height: 250px;
+  }
+
   .reviews {
     padding: 40px 16px;
+  }
+
+  .review-container {
+    padding: 15px;
+  }
+
+  .review-container h3 {
+    font-size: 16px;
+  }
+
+  .review-container p {
+    font-size: 16px;
   }
 
   .faq {
     padding: 40px 16px;
   }
 
+  .faq h1 {
+    font-size: 24px;
+  }
+
+  .faq-top h2 {
+    font-size: 16px;
+  }
+
+  .faq-bottom p {
+    font-size: 16px;
+  }
+
   .last-cta {
     padding: 40px 16px;
+    gap: 30px;
   }
 
   .last-cta h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .last-cta h2,
   .last-cta h3 {
+    font-size: 16px;
+  }
+
+  .about {
+    padding: 40px 16px;
+  }
+
+  .about-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .about-container img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about-container p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px 12px;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .button-primary,
+  .button-secondary {
+    font-size: 14px;
+    height: 45px;
+  }
+
+  .features-content {
+    padding: 0 12px;
+    gap: 20px;
+  }
+
+  .feature-container h2 {
     font-size: 18px;
+  }
+
+  .feature-container p {
+    font-size: 13px;
+  }
+
+  .benefits {
+    padding: 30px 12px;
+    gap: 30px;
+  }
+
+  .benefit-container img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .benefit-text h2 {
+    font-size: 16px;
+  }
+
+  .benefit-text p {
+    font-size: 14px;
+  }
+
+  .reviews {
+    padding: 30px 12px;
+  }
+
+  .review-container {
+    padding: 12px;
+  }
+
+  .review-container h3 {
+    font-size: 14px;
+  }
+
+  .review-container p {
+    font-size: 14px;
+  }
+
+  .faq {
+    padding: 30px 12px;
+  }
+
+  .faq h1 {
+    font-size: 20px;
+  }
+
+  .faq-top h2 {
+    font-size: 14px;
+  }
+
+  .faq-bottom p {
+    font-size: 14px;
+  }
+
+  .last-cta {
+    padding: 30px 12px;
+    gap: 25px;
+  }
+
+  .last-cta h1 {
+    font-size: 24px;
+  }
+
+  .last-cta h2,
+  .last-cta h3 {
+    font-size: 14px;
+  }
+
+  .about {
+    padding: 30px 12px;
+  }
+
+  .about-container {
+    padding: 12px;
+  }
+
+  .about-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-container p {
+    font-size: 14px;
   }
 }
 
@@ -471,6 +669,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .about-container {
