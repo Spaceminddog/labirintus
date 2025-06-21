@@ -576,24 +576,29 @@ p {
 
   h1 {
     font-size: 20px;
+    margin: 0 20px;
   }
 
   h2 {
     font-size: 16px;
+    margin: 0 20px;
   }
 
   h3 {
     font-size: 14px;
+    margin: 0 20px;
   }
 
   p {
     font-size: 14px;
+    margin: 0 20px;
   }
 
   .button-primary,
   .button-secondary {
     font-size: 14px;
     height: 45px;
+    margin: 0 20px;
   }
 
   .features-content {
@@ -603,10 +608,12 @@ p {
 
   .feature-container h2 {
     font-size: 18px;
+    margin: 0 20px;
   }
 
   .feature-container p {
     font-size: 13px;
+    margin: 0 20px;
   }
 
   .benefits {
@@ -617,14 +624,17 @@ p {
   .benefit-container img {
     width: 200px;
     height: 200px;
+    margin: 0 20px;
   }
 
   .benefit-text h2 {
     font-size: 16px;
+    margin: 0 20px;
   }
 
   .benefit-text p {
     font-size: 14px;
+    margin: 0 20px;
   }
 
   .reviews {
@@ -633,14 +643,17 @@ p {
 
   .review-container {
     padding: 12px;
+    margin: 0 20px;
   }
 
   .review-container h3 {
     font-size: 14px;
+    margin: 0 20px;
   }
 
   .review-container p {
     font-size: 14px;
+    margin: 0 20px;
   }
 
   .faq {
@@ -649,14 +662,17 @@ p {
 
   .faq h1 {
     font-size: 20px;
+    margin: 0 20px;
   }
 
   .faq-top h2 {
     font-size: 14px;
+    margin: 0 20px;
   }
 
   .faq-bottom p {
     font-size: 14px;
+    margin: 0 20px;
   }
 
   .last-cta {
@@ -666,11 +682,13 @@ p {
 
   .last-cta h1 {
     font-size: 24px;
+    margin: 0 20px;
   }
 
   .last-cta h2,
   .last-cta h3 {
     font-size: 14px;
+    margin: 0 20px;
   }
 
   .about {
@@ -679,15 +697,18 @@ p {
 
   .about-container {
     padding: 12px;
+    margin: 0 20px;
   }
 
   .about-container img {
     width: 60px;
     height: 60px;
+    margin: 0 20px;
   }
 
   .about-container p {
     font-size: 14px;
+    margin: 0 20px;
   }
 }
 
