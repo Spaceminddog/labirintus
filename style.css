@@ -444,28 +444,30 @@ p {
     gap: 40px;
   }
 
-  .benefit-container {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
+  .benefit-container,
   .benefit-container.reverse {
+    flex-direction: column !important;
+  }
+
+  .benefit-container img,
+  .benefit-container.reverse img {
+    order: 1;
+  }
+
+  .benefit-container .benefit-text,
+  .benefit-container.reverse .benefit-text {
+    display: flex;
     flex-direction: column;
   }
 
-  .benefit-text {
-    text-align: center;
+  .benefit-container .benefit-text h2,
+  .benefit-container.reverse .benefit-text h2 {
+    order: 2;
   }
 
-  .benefit-text h2 {
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .benefit-text p {
-    text-align: center;
-    font-size: 16px;
+  .benefit-container .benefit-text p,
+  .benefit-container.reverse .benefit-text p {
+    order: 3;
   }
 
   .benefit-container img {
