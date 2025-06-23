@@ -881,7 +881,7 @@ p {
   }
   .nav-menu.open {
     display: flex;
-    background: var(--primary-color-rgba);
+    background: white
   }
 }
 @media (max-width: 480px) {
