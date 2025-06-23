@@ -714,3 +714,130 @@ p {
   text-align: left;
   width: 100%;
 }
+
+/* --- Header styles --- */
+.site-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 70px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #748E63;
+  letter-spacing: 1px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-list li a:hover {
+  color: #748E63;
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 16px;
+}
+.hamburger {
+  width: 26px;
+  height: 3px;
+  background: #748E63;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+  display: block;
+}
+
+/* --- Responsive header --- */
+@media (max-width: 900px) {
+  .site-header {
+    padding: 0 12px;
+  }
+  .nav-list {
+    gap: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .site-header {
+    height: 56px;
+    padding: 0 8px;
+  }
+  .site-name {
+    font-size: 1.1rem;
+  }
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+  .header-nav {
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-list {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 180px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 0 0 10px 10px;
+    display: none;
+    z-index: 1001;
+  }
+  .nav-list.open {
+    display: flex;
+  }
+  .nav-list li {
+    padding: 14px 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .nav-list li:last-child {
+    border-bottom: none;
+  }
+}
