@@ -9,13 +9,16 @@
 </head>
 <body>
   <header class="header">
-    <nav>
-      <div class="logo">
-        <a href="index.html">Labirintus</a>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo">Labirintus</a>
       </div>
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <ul class="menu">
+      <button class="nav-toggle" aria-label="Menü megnyitása">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-menu">
         <li><a href="#how">Hogyan működik?</a></li>
         <li><a href="#faq">GYIK</a></li>
         <li><a href="#mesek">Mesék</a></li>
