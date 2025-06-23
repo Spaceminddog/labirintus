@@ -769,8 +769,7 @@ p {
 .header {
   width: 100%;
   background: transparent;
-  position: sticky;
-  top: 0;
+  position: static;
   z-index: 1000;
 }
 .nav {
