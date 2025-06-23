@@ -449,9 +449,13 @@ p {
     flex-direction: column !important;
   }
 
-  .benefit-container img,
-  .benefit-container.reverse img {
+  .benefit-container > img,
+  .benefit-container.reverse > img {
     order: 1;
+  }
+  .benefit-container > .benefit-text,
+  .benefit-container.reverse > .benefit-text {
+    order: 2;
   }
 
   .benefit-container .benefit-text,
