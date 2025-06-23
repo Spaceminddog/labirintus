@@ -52,3 +52,18 @@ function toggleFaq(element) {
   const container = element.parentElement;
   container.classList.toggle('active');
 }
+
+// Responsive header menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+if (navToggle && navList) {
+  navToggle.addEventListener('click', () => {
+    navList.classList.toggle('open');
+  });
+  // Optional: close menu when a link is clicked (for better UX)
+  navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('open');
+    });
+  });
+}
