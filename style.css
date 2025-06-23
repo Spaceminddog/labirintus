@@ -848,9 +848,21 @@ p {
   .nav {
     height: 56px;
     padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
   }
   .nav-logo {
     font-size: 1.1rem;
+  }
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
   }
   .nav-menu {
     flex-direction: column;
@@ -865,12 +877,11 @@ p {
     display: none;
     z-index: 1001;
     padding: 1rem 0.5rem;
+    transition: background 0.3s;
   }
   .nav-menu.open {
     display: flex;
-  }
-  .nav-toggle {
-    display: flex;
+    background: var(--primary-color-rgba);
   }
 }
 @media (max-width: 480px) {
