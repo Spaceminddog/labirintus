@@ -8,25 +8,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-content">
-      <div class="header-left">
-        <span class="site-name">Labirintus</span>
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <a href="index.html">Labirintus</a>
       </div>
-      <nav class="header-nav">
-        <ul class="nav-list">
-          <li><a href="#how">Hogyan működik?</a></li>
-          <li><a href="#faq">GYIK</a></li>
-          <li><a href="#mesek">Mesék</a></li>
-          <li><a href="#esemenyek">Események</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Menü megnyitása">
-          <span class="hamburger"></span>
-          <span class="hamburger"></span>
-          <span class="hamburger"></span>
-        </button>
-      </nav>
-    </div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="menu">
+        <li><a href="#how">Hogyan működik?</a></li>
+        <li><a href="#faq">GYIK</a></li>
+        <li><a href="#mesek">Mesék</a></li>
+        <li><a href="#esemenyek">Események</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="hero">
