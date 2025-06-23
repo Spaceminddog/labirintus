@@ -520,13 +520,20 @@ p {
   }
 
   /* About section mobile adjustments */
-  .about-container {
+  .about {
     max-width: 100%;
     width: 100%;
+    padding: 30px 12px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .about-container {
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     padding: 15px;
-    max-width: 400px;
   }
 
   .about-container img {
