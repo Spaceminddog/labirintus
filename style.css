@@ -524,7 +524,11 @@ p {
   /* About section mobile adjustments */
   .about-container {
     max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
     padding: 15px;
+    max-width: 400px;
   }
 
   .about-container img {
