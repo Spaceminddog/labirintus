@@ -525,6 +525,7 @@ p {
 
   /* About section mobile adjustments */
   .about {
+    display: block !important;
     max-width: 100%;
     width: 100%;
     padding: 30px 12px;
@@ -533,11 +534,13 @@ p {
   }
 
   .about-container {
+    display: block !important;
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
     padding: 15px;
+    background-color: rgba(116, 142, 99, 0.2);
   }
 
   .about-container img {
