@@ -718,16 +718,21 @@ p {
 /* --- Header styles --- */
 .site-header {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 0.5rem;
-  height: 64px;
   background: transparent;
   box-shadow: none;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+.header-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  height: 64px;
 }
 .header-left {
   display: flex;
@@ -789,9 +794,12 @@ p {
   .nav-list {
     gap: 1rem;
   }
+  .header-content {
+    max-width: 100%;
+  }
 }
 @media (max-width: 768px) {
-  .site-header {
+  .header-content {
     height: 56px;
     padding: 0 0.5rem;
   }
@@ -831,9 +839,17 @@ p {
   .header-nav {
     align-items: center;
   }
+  .header-content {
+    max-width: 100vw;
+    width: 100vw;
+    padding: 0 0.5rem;
+  }
+  .site-header {
+    min-width: 0;
+  }
 }
 @media (max-width: 600px) {
-  .site-header {
+  .header-content {
     height: 48px;
   }
   .site-name {
@@ -848,7 +864,7 @@ p {
   }
 }
 @media (max-width: 480px) {
-  .site-header {
+  .header-content {
     height: 44px;
   }
   .site-name {
@@ -857,5 +873,9 @@ p {
   .nav-list {
     top: 44px;
     width: 100vw;
+  }
+  .header-content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
