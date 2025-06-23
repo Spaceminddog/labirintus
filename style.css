@@ -357,6 +357,12 @@ p {
   margin: 0;
 }
 
+.hero > .review-container {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 @media (min-width: 768px) {
   .hero,
   .features-content,
