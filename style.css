@@ -458,16 +458,14 @@ p {
   .benefit-container.reverse .benefit-text {
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
   .benefit-container .benefit-text h2,
-  .benefit-container.reverse .benefit-text h2 {
-    order: 2;
-  }
-
+  .benefit-container.reverse .benefit-text h2,
   .benefit-container .benefit-text p,
   .benefit-container.reverse .benefit-text p {
-    order: 3;
+    text-align: center;
   }
 
   .benefit-container img {
