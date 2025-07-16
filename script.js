@@ -3,7 +3,7 @@ function handlePrimaryClick() {
 }
 
 function handleSecondaryClick() {
-  // Add your secondary button click handler here
+  window.open('https://tally.so/r/mRq0O4', '_blank');
 }
 
 // Review carousel functionality
