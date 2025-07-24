@@ -80,7 +80,7 @@ p {
   background-color: #5f734e;
 }
 
-.button-secondary {
+a.button-secondary, button.button-secondary {
   background-color: transparent;
   color: var(--primary-color);
   font-size: 20px;
@@ -92,7 +92,7 @@ p {
   transition: all 0.3s;
 }
 
-.button-secondary:hover {
+a.button-secondary:hover, button.button-secondary:hover {
   background-color: #fef1ec;
 }
 
