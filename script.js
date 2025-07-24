@@ -6,6 +6,15 @@ function handleSecondaryClick() {
   window.open('https://tally.so/r/mRq0O4', '_blank');
 }
 
+function handleConsultClick() {
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.href = 'mailto:mesefejtes@gmail.com?subject=Kapcsolatfelvétel';
+  } else {
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mesefejtes@gmail.com&su=Kapcsolatfelvétel', '_blank');
+  }
+}
+
 // Review carousel functionality
 document.addEventListener('DOMContentLoaded', function() {
   const reviews = document.querySelectorAll('.review-container');
