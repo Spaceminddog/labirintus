@@ -77,3 +77,5 @@ function toggleFaq(element) {
     });
   }
 })();
+
+window.handleConsultClick = handleConsultClick;
