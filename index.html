@@ -36,7 +36,7 @@
       <p>„Nem is tudom, mi a legjobb a mesefoglalkozásokban. [...] Csodálatos érzés, hogy nyugodtan megmutathatom magamat, szembenézhetek minden érzésemmel, mert mindig van valaki, aki elfogad, támogat, és teljes figyelmével ott áll mellettem."</p>
     </div>
     <h3>Ha úgy érzed, megszólított a mesékkel való munka, szeretettel várlak egy konzultációra – kattints a Jelentkezem konzultációra gombra.</h3>
-    <button class="button-secondary consult-btn">Jelentkezem konzultációra</button>
+    <button class="button-secondary open-popup-btn">Jelentkezem konzultációra</button>
   </section>
 
   <section class="features" id="features">
@@ -149,7 +149,7 @@
     <h1>A változás benned kezdődik.</var></h1>
     <h2>A mese csak a kezdet. Ha készen állsz belépni a saját belső világodba, megismerni és megerősíteni önmagad, szeretettel várlak egyéni vagy csoportos alkalmon.</h2>
     <h3>Ha úgy érzed, megszólított a mesékkel való munka, szeretettel várlak egy konzultációra – kattints a Jelentkezem konzultációra gombra.</h3>
-    <button class="button-secondary consult-btn">Jelentkezem konzultációra</button>
+    <button class="button-secondary open-popup-btn">Jelentkezem konzultációra</button>
   </section>
 
   <section class="about">
@@ -164,6 +164,23 @@ Ez a támogatás volt fő célom, amikor elvégeztem a Kincskereső Meseterápi�
 Maga az Út, amelyen járunk, egyedi, gyönyörű, csodálatos. Minden élet egy varázslat, minden ember kincseket hordoz önmagában. Ezeket szeretném a mesék képeivel átadni, láttatni.</p>
     </div>
   </section>
+
+  <!-- Popup Form Overlay -->
+  <div id="popup-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:2000; justify-content:center; align-items:center;">
+    <div id="popup-form-container" style="background:#fff; border-radius:12px; max-width:95vw; width:400px; padding:32px 24px; box-shadow:0 8px 32px rgba(0,0,0,0.2); position:relative;">
+      <button id="popup-close-btn" style="position:absolute; top:12px; right:12px; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+      <h2 style="margin-top:0; text-align:center;">Jelentkezés konzultációra</h2>
+      <form action="https://formsubmit.co/bnorbert.magan@gmail.com" method="POST" style="display:flex; flex-direction:column; gap:16px;">
+        <label for="popup-name">Hogy szólíthatunk?</label>
+        <input id="popup-name" type="text" name="name" placeholder="Neved" required>
+        <label for="popup-email">E-mail cím</label>
+        <input id="popup-email" type="email" name="email" placeholder="Email címed" required>
+        <label for="popup-message">Miben segíthetek?</label>
+        <textarea id="popup-message" name="message" placeholder="Üzenet" required></textarea>
+        <button type="submit" class="button-primary">Elküldöm</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
