@@ -54,6 +54,17 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.consult-btn').forEach(btn => {
     btn.addEventListener('click', handleConsultClick);
   });
+
+  // Set consult link href based on device
+  var consultLinks = document.querySelectorAll('.consult-link');
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  var mailto = 'mailto:mesefejtes@gmail.com?subject=Kapcsolatfelvétel';
+  var gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=mesefejtes@gmail.com&su=Kapcsolatfelvétel';
+  consultLinks.forEach(function(link) {
+    link.setAttribute('href', isMobile ? mailto : gmail);
+    link.setAttribute('target', isMobile ? '_self' : '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
 });
 
 // FAQ toggle functionality
