@@ -7,7 +7,7 @@ function handleSecondaryClick() {
 }
 
 function handleConsultClick() {
-  window.location.href = 'mailto:mesefejtes@gmail.com?subject=Kapcsolatfelvétel';
+  // Functionality removed: button now does nothing
 }
 
 // Review carousel functionality
