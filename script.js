@@ -49,6 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
     currentReview = (currentReview + 1) % reviews.length;
     showReview(currentReview);
   }, 10000);
+
+  // Attach consult click handler to all relevant buttons
+  document.querySelectorAll('.consult-btn').forEach(btn => {
+    btn.addEventListener('click', handleConsultClick);
+  });
 });
 
 // FAQ toggle functionality

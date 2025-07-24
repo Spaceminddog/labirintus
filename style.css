@@ -80,8 +80,7 @@ p {
   background-color: #5f734e;
 }
 
-.button-secondary,
-a.button-secondary {
+.button-secondary {
   background-color: transparent;
   color: var(--primary-color);
   font-size: 20px;
@@ -91,19 +90,10 @@ a.button-secondary {
   width: 500px;
   cursor: pointer;
   transition: all 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-sizing: border-box;
-  text-align: center;
 }
 
-.button-secondary:hover,
-a.button-secondary:hover {
+.button-secondary:hover {
   background-color: #fef1ec;
-  color: var(--primary-color);
-  text-decoration: none;
 }
 
 .features {
