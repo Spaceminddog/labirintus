@@ -54,6 +54,27 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.consult-btn').forEach(btn => {
     btn.addEventListener('click', handleConsultClick);
   });
+
+  // Popup logic
+  function openPopup() {
+    document.getElementById('popup-overlay').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closePopup() {
+    document.getElementById('popup-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Attach popup open handler to all relevant buttons
+  document.querySelectorAll('.open-popup-btn').forEach(btn => {
+    btn.addEventListener('click', openPopup);
+  });
+  // Close popup on close button
+  document.getElementById('popup-close-btn').addEventListener('click', closePopup);
+  // Close popup when clicking outside the form
+  document.getElementById('popup-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closePopup();
+  });
 });
 
 // FAQ toggle functionality
