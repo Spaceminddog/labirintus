@@ -1053,3 +1053,58 @@ p {
     font-size: 1.1rem;
   }
 }
+
+.spotlight {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 80px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.spotlight h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+  color: var(--primary-color);
+}
+.spotlight h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #222;
+}
+.spotlight > div {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* Remove box-shadow and background for transparent look */
+  /* box-shadow: 0 4px 24px rgba(116, 142, 99, 0.10); */
+  /* background: #fff; */
+}
+@media (max-width: 900px) {
+  .spotlight {
+    max-width: 100%;
+    padding: 40px 8px;
+  }
+  .spotlight > div {
+    max-width: 100vw;
+  }
+}
+@media (max-width: 480px) {
+  .spotlight {
+    padding: 24px 4px;
+    gap: 18px;
+  }
+  .spotlight h1 {
+    font-size: 1.2rem;
+  }
+  .spotlight h2 {
+    font-size: 1rem;
+  }
+}
